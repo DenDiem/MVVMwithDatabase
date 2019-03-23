@@ -1,0 +1,43 @@
+﻿<Window x:Class="WpfSimpleMVVM.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfSimpleMVVM"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="495.283" Width="1056.132">
+    <Grid>
+        <Grid HorizontalAlignment="Left" Height="400" Margin="10,10,0,0" VerticalAlignment="Top" Width="413">
+            <Label Content="Name:" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label Content="EMail:" HorizontalAlignment="Left" Margin="10,157,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label Content="Second Name:" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label Content="Date:" HorizontalAlignment="Left" Margin="10,230,0,0" VerticalAlignment="Top" FontSize="22" />
+            <Button Content="Proceed" HorizontalAlignment="Left" Margin="98,329,0,0" VerticalAlignment="Top" Width="213" Height="41" FontSize="22" Command="{Binding ProceedCommand}"/>
+            <TextBox HorizontalAlignment="Left" Height="38" Margin="177,31,0,0" TextWrapping="Wrap" Text="{Binding Nameinput}" VerticalAlignment="Top" Width="226" FontSize="22"/>
+            <TextBox HorizontalAlignment="Left" Height="38" Margin="177,100,0,0" TextWrapping="Wrap" Text="{Binding Secondnameinput}" VerticalAlignment="Top" Width="226" FontSize="22"/>
+            <TextBox HorizontalAlignment="Left" Height="38" Margin="177,161,0,0" TextWrapping="Wrap" Text="{Binding Emailinput}" VerticalAlignment="Top" Width="226" FontSize="22"/>
+            <DatePicker HorizontalAlignment="Left" Margin="177,232,0,0" VerticalAlignment="Top" FontSize="22" Width="226" SelectedDate="{Binding Dateinput,  Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="399" Margin="587,37,0,0" VerticalAlignment="Top" Width="435">
+            <Label Content="Name:" HorizontalAlignment="Left" Margin="15,41,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label Content="EMail:" HorizontalAlignment="Left" Margin="15,126,0,0" VerticalAlignment="Top" FontSize="22" RenderTransformOrigin="0.548,0.824"/>
+            <Label Content="Second Name:" HorizontalAlignment="Left" Margin="15,86,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label HorizontalAlignment="Left" Margin="10,166,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label Content="Chinese Sign" HorizontalAlignment="Left" Margin="15,342,0,0" VerticalAlignment="Top" FontSize="22" RenderTransformOrigin="0.431,1.516"/>
+            <Label Content="Sun  Sign:" HorizontalAlignment="Left" Margin="15,302,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label Content="Birthday:" HorizontalAlignment="Left" Margin="15,257,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label Content="Adult" HorizontalAlignment="Left" Margin="15,212,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label Content="OutPut" HorizontalAlignment="Left" Margin="140,0,0,0" VerticalAlignment="Top" FontSize="22"/>
+            <Label Content="Date:" FontSize="22" Margin="15,171,301,188"/>
+            <TextBlock HorizontalAlignment="Left" Margin="233,46,0,0" TextWrapping="Wrap" Text="{Binding NameOutput}" VerticalAlignment="Top" FontSize="22"/>
+            <TextBlock HorizontalAlignment="Left" Margin="233,347,0,0" TextWrapping="Wrap" Text="{Binding ChineseSignOutput}" VerticalAlignment="Top" FontSize="22"/>
+            <TextBlock HorizontalAlignment="Left" Margin="233,307,0,0" TextWrapping="Wrap" Text="{Binding SunSignOutput}" VerticalAlignment="Top" FontSize="22"/>
+            <TextBlock HorizontalAlignment="Left" Margin="233,262,0,0" TextWrapping="Wrap" Text="{Binding BirthDayOutput}" VerticalAlignment="Top" FontSize="22"/>
+            <TextBlock HorizontalAlignment="Left" Margin="233,217,0,0" TextWrapping="Wrap" Text="{Binding AdultOutput}" VerticalAlignment="Top" FontSize="22"/>
+            <TextBlock HorizontalAlignment="Left" Margin="233,176,0,0" TextWrapping="Wrap" Text="{Binding DateOutput}" VerticalAlignment="Top" FontSize="22"/>
+            <TextBlock HorizontalAlignment="Left" Margin="233,131,0,0" TextWrapping="Wrap" Text="{Binding EmailOutput}" VerticalAlignment="Top" FontSize="22"/>
+            <TextBlock HorizontalAlignment="Left" Margin="233,91,0,0" TextWrapping="Wrap" Text="{Binding SecondNameOutput}" VerticalAlignment="Top" FontSize="22"/>
+        </Grid>
+
+    </Grid>
+</Window>
